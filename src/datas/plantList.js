@@ -91,7 +91,7 @@ export const plantList = [
 		price: 12
 	},
 	{
-		name: 'succulente la grosse bite1',
+		name: 'succulente la grossee',
 		category: 'plante grosse',
 		id: '9fn',
 		isBestSale: true,
@@ -102,7 +102,7 @@ export const plantList = [
 		price: 62
 	},
 	{
-		name: 'succulente la grosse bite2',
+		name: 'succulente la grosse',
 		category: 'plante grosse',
 		id: '9pn',
 		isBestSale: false,

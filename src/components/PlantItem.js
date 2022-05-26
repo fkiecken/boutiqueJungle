@@ -1,48 +1,56 @@
 import CareScale from './CareScale'
+import Modal from "./Modal";
 import '../styles/CartPlant.css'
+import React from 'react';
+import useModal from './useModal';
+
 
 function PlantItem(props) {
 
+    const { isShowing, showModal } = useModal();
     const {id, name, isSpecialOffer, cover, light, water} = props
+    var conseilLight = 'null'
+    var conseilWater = 'null'
 
     function alertScale(type) {
-        var conseil = 'null'
         if(type==='light') {
+            conseilLight = 'null'
             switch(light) {
                 case 1: 
-                    conseil = 'peu'
+                    conseilLight = 'peu'
                     break
                 case 2: 
-                    conseil = 'moderemment'
+                    conseilLight = 'moderemment'
                     break
                 case 3: 
-                    conseil = 'beaucoup'
+                    conseilLight = 'beaucoup'
                     break
                 default:
                     break
             }
-            alert('Cette plante requiert ' + conseil + ' de lumière')
+            alert('Cette plante requiert ' + conseilLight + ' de lumière')
         } else {
+            conseilWater = 'null'
             switch(water) {
                 case 1: 
-                    conseil = 'peu'
+                    conseilWater = 'peu'
                     break
                 case 2: 
-                    conseil = 'moderemment'
+                    conseilWater = 'moderemment'
                     break
                 case 3: 
-                    conseil = 'beaucoup'
+                    conseilWater = 'beaucoup'
                     break
                 default:
                     break
             }
-            alert('Cette plante requiert ' + conseil + " d'eau")
+            alert('Cette plante requiert ' + conseilWater + " d'eau")
         }
-
     }
 
     return (
         <span>
+            <Modal isShowing={isShowing} hide={showModal} name={name} isSpecialOffer={isSpecialOffer} conseilLight={conseilLight} conseilWater={conseilWater}/>
             {
                     <li key={id} className='lmj-plant-item'>
                     <span className='titleCartItem'>{ name }</span>
@@ -51,7 +59,7 @@ function PlantItem(props) {
                         <div className='lmj-sales'>SOLDES</div>
                     }
                     <br/>
-                    <img src={require('../assets/' + cover + '.jpg')} alt={id} className='imgCart'/>
+                    <img src={require('../assets/' + cover + '.jpg')} alt={id} className='imgCart' onClick={showModal}/>
                     <br/>
                     <div className='plantDetail'>
                         <span onClick={() => alertScale('light')}><CareScale careType='light' scaleValue={light}/></span>

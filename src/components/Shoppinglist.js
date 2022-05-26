@@ -1,6 +1,5 @@
 import PlantItem from './PlantItem'
 import { plantList } from '../datas/plantList'
-import Modal from './Modal'
 import { useState } from 'react'
 import '../styles/ShoppingList.css'
 
@@ -63,17 +62,9 @@ function Shoppinglist({ cart, updateCart}) {
         }
     }
 
-    function testPopup() {
-        console.log("zizi")
-        return (
-            <Modal/>
-        )
-    }
-
 
     return(
         <div className='containerShoppingList'>
-            <button onClick={() => testPopup()}>zizi</button>
             <div className='categories'>
                 <select                 
                 value={categorieSelected} 
