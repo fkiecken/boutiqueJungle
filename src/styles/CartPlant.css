@@ -1,0 +1,30 @@
+.imgCart {
+    height: 150px;
+    width: 150px;
+    border-radius: 25px;
+}
+
+.lmj-plant-item {
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	margin: auto;
+    width: 170px;
+    height: 220px;
+    border: none;
+    padding: 5px;
+}
+
+.plantDetail {
+    width: 170px;
+    margin-left: 22px;
+    margin-top: -15px;
+}
+
+.titleCartItem {
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,174 @@
+.cartContainer {
+    margin-top: 80px;
+    position: absolute;
+    padding: 30px;
+    color: #ffffff;
+    background-color: #31b572;
+    width: 15%;
+    height: auto;
+    margin-left: 4%;
+    border-radius: 15px 50px 30px 5px;
+    -webkit-box-shadow: 31px 35px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 31px 35px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 31px 35px 0px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+.buttonOpen {
+    transition-duration: 0.4s;
+    width: 120px;
+    height: 30px;
+    border: 2px solid #275829; /* Green */
+    background-color: white;
+    margin-left: 4%;
+    margin-top: 58px;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.buttonOpen:hover {
+    background-color: #275829; /* Green */
+    color: white;
+    border-radius: 25px;
+}
+
+.buttonClose {
+    border: none;
+    background-color: transparent;
+    margin-left: 240px;
+    margin-top: -15px;
+    position: absolute;
+    display: inline-block;
+    color: black;
+}
+
+.buttonClose:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .buttonClose:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .titleCart {
+      font-weight: bold;
+      font-size: 22px;
+  }
+
+  .outer {
+    position: relative;
+    width: 20px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .inner {
+    width: inherit;
+    text-align: center;
+    border: none;
+    background: none;
+  }
+  
+  .inner:before, .inner:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: inherit;
+    background: #FFFFFF;
+    left: 0;
+    transition: all .3s ease-in;
+  }
+  
+  .inner:before {
+    top: 50%; 
+    transform: rotate(45deg);  
+  }
+  
+  .inner:after {  
+    bottom: 50%;
+    transform: rotate(-45deg);  
+  }
+  
+  .outer:hover label {
+    opacity: 1;
+  }
+  
+  .outer:hover .inner:before,
+  .outer:hover .inner:after {
+    transform: rotate(0);
+  }
+  
+  .outer:hover .inner:before {
+    top: 0;
+  }
+  
+  .outer:hover .inner:after {
+    bottom: 0;
+  }
+
+.resetCartButton {
+    appearance: none;
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+    }
+
+.resetCartButton:hover {
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+.resetCartButton:disabled {
+    background-color: #FAFBFC;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959DA5;
+    cursor: default;
+}
+
+.resetCartButton:active {
+    background-color: #EDEFF2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+}
+
+.resetCartButton:focus {
+    outline: 1px transparent;
+}
+
+.resetCartButton:before {
+    display: none;
+}
+
+.resetCartButton:-webkit-details-marker {
+    display: none;
+}

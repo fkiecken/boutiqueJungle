@@ -1,0 +1,22 @@
+.bannerContainer {
+    background-color: white;
+}
+
+.bannerTitle {
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.bannerLogo {
+    width: auto;
+    height: auto;
+}
+
+.title {
+    font-size: 6px;
+}
+
+.recommandation {
+    text-align: center;
+}
