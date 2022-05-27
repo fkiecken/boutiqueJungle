@@ -14,33 +14,31 @@ function PlantItem(props) {
 
     function alertScale(type) {
         if(type==='light') {
-            conseilLight = 'null'
             switch(light) {
                 case 1: 
                     conseilLight = 'peu'
-                    break
+                    return conseilLight
                 case 2: 
                     conseilLight = 'moderemment'
-                    break
+                    return conseilLight
                 case 3: 
                     conseilLight = 'beaucoup'
-                    break
+                    return conseilLight
                 default:
                     break
             }
             alert('Cette plante requiert ' + conseilLight + ' de lumière')
         } else {
-            conseilWater = 'null'
             switch(water) {
                 case 1: 
                     conseilWater = 'peu'
-                    break
+                    return conseilWater
                 case 2: 
                     conseilWater = 'moderemment'
-                    break
+                    return conseilWater
                 case 3: 
                     conseilWater = 'beaucoup'
-                    break
+                    return conseilWater
                 default:
                     break
             }
@@ -50,7 +48,7 @@ function PlantItem(props) {
 
     return (
         <span>
-            <Modal isShowing={isShowing} hide={showModal} name={name} isSpecialOffer={isSpecialOffer} conseilLight={conseilLight} conseilWater={conseilWater}/>
+            <Modal isShowing={isShowing} hide={showModal} name={name} isSpecialOffer={isSpecialOffer} conseilLight={alertScale('light')} conseilWater={alertScale('water')}/>
             {
                     <li key={id} className='lmj-plant-item'>
                     <span className='titleCartItem'>{ name }</span>

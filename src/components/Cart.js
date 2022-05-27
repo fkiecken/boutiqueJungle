@@ -6,25 +6,26 @@ function Cart({ cart, updateCart}) {
     const [isOpen, setIsOpen] = useState(true)
     var totalCart = 0
     var nbItemInCart = 0
-    cart.forEach(element => nbItemInCart = nbItemInCart + element.amount)
+    if(JSON.stringify(cart) !== 'undefined') {
+        cart.map(({name, price, amount}, index) => (
+            totalCart = totalCart + (price * amount)
+        ))
+        cart.forEach(element => nbItemInCart = nbItemInCart + element.amount)
+    } else {
+        nbItemInCart = 0
+    }
 
     useEffect(() => {
         document.title = "BoutiqueJungle (" + nbItemInCart + ")"
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart, nbItemInCart])
 
-    if(cart !== []) {
-        cart.map(({name, price, amount}, index) => (
-            totalCart = totalCart + (price * amount)
-        )) 
-    }
-
     return isOpen ? (
         <div className='cartContainer'>
             <div className='outer'><button className={isOpen ? 'inner' : 'buttonOpen'} onClick={() => setIsOpen(false)}></button></div>
             <span className='titleCart'>PÄNIER</span>
             <div className='contentCart'><br/>
-            {cart !== [] &&
+            {JSON.stringify(cart) !== 'null' &&
             cart.map(({name, price, amount}, index) => (
                     <div key={(price * Math.random())}>
                         <b>{name}</b> Qté : <b>{amount}</b>

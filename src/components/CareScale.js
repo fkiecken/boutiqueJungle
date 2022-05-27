@@ -1,7 +1,7 @@
 function CareScale(props) {
     const {scaleValue, careType} = props
     const range = [1, 2, 3]
-    const scaleType = careType === 'light' ? '☀️ ' : '💧 '
+    const scaleType = careType === 'light' ? '☀️' : '💧'
 
     return (
         <div>

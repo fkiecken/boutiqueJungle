@@ -18,7 +18,7 @@ function Shoppinglist({ cart, updateCart}) {
     }
 
     function addToCart(name, price) {
-        if(cart.length !== 0) {
+        if(JSON.stringify(cart) !== 'null') {
             var currentItem = cart.find(plant => plant.name === name)
             if(currentItem != null) {
                 const cartFilteredCurrentPlant = cart.filter(
@@ -37,7 +37,6 @@ function Shoppinglist({ cart, updateCart}) {
     }
 
     function deleteOfCart(name, price) {
-
         var currentItem = cart.find(plant => plant.name === name)
         const cartFilteredCurrentPlant = cart.filter(
             (plant) => plant.name !== name
@@ -72,7 +71,7 @@ function Shoppinglist({ cart, updateCart}) {
                 >
                 {
                     categories.map((categories) => (
-                        <option value={categories}>{categories}</option>
+                        <option value={categories} key={categories}>{categories}</option>
                     ))
                 } 
                 </select>

@@ -8,6 +8,9 @@ import Footer from './Footer';
 function App() {
 
   const [cart, updateCart] = useState(JSON.parse(localStorage.getItem('cart')))
+  if(JSON.stringify(cart) == 'undefined') {
+    updateCart([])
+  }
 
   return (
 
