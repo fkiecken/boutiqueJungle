@@ -1,6 +1,6 @@
 export const plantList = [
 	{
-		name: 'monstera',
+		name: 'Monstera',
 		category: 'classique',
 		id: '1ed',
 		isBestSale: false,
@@ -10,7 +10,7 @@ export const plantList = [
 		price: 15
 	},
 	{
-		name: 'ficus lyrata',
+		name: 'Ficus lyrata',
 		category: 'classique',
 		id: '2ab',
 		isBestSale: false,
@@ -20,7 +20,7 @@ export const plantList = [
 		price: 18
 	},
 	{
-		name: 'pothos argenté',
+		name: 'Pothos argenté',
 		category: 'classique',
 		id: '3sd',
 		isBestSale: false,
@@ -30,7 +30,7 @@ export const plantList = [
 		price: 26
 	},
 	{
-		name: 'yucca',
+		name: 'Yucca',
 		category: 'classique',
 		id: '4kk',
 		isBestSale: false,
@@ -40,7 +40,7 @@ export const plantList = [
 		price: 15
 	},
 	{
-		name: 'olivier',
+		name: 'Olivier',
 		category: 'extérieur',
 		id: '5pl',
 		isBestSale: false,
@@ -50,7 +50,7 @@ export const plantList = [
 		price: 58
 	},
 	{
-		name: 'géranium',
+		name: 'Géranium',
 		category: 'extérieur',
 		id: '6uo',
 		isBestSale: false,
@@ -60,7 +60,7 @@ export const plantList = [
 		price: 48
 	},
 	{
-		name: 'basilique',
+		name: 'Basilique',
 		category: 'extérieur',
 		id: '7ie',
 		isBestSale: true,
@@ -70,7 +70,7 @@ export const plantList = [
 		price: 89
 	},
 	{
-		name: 'aloe',
+		name: 'Aloe',
 		category: 'plante grasse',
 		id: '8fp',
 		isBestSale: false,
@@ -80,7 +80,7 @@ export const plantList = [
 		price: 45
 	},
 	{
-		name: 'succulente',
+		name: 'Succulente',
 		category: 'plante grasse',
 		id: '9vn',
 		isBestSale: false,
@@ -91,7 +91,7 @@ export const plantList = [
 		price: 12
 	},
 	{
-		name: 'succulente la grossee',
+		name: 'Succulente la grossee',
 		category: 'plante grosse',
 		id: '9fn',
 		isBestSale: true,
@@ -102,7 +102,7 @@ export const plantList = [
 		price: 62
 	},
 	{
-		name: 'succulente la grosse',
+		name: 'Succulente la grosse',
 		category: 'plante grosse',
 		id: '9pn',
 		isBestSale: false,

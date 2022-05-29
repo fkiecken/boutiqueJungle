@@ -4,7 +4,6 @@ import '../styles/CartPlant.css'
 import React from 'react';
 import useModal from './useModal';
 
-
 function PlantItem(props) {
 
     const { isShowing, showModal } = useModal();
@@ -48,7 +47,7 @@ function PlantItem(props) {
 
     return (
         <span>
-            <Modal isShowing={isShowing} hide={showModal} name={name} isSpecialOffer={isSpecialOffer} conseilLight={alertScale('light')} conseilWater={alertScale('water')}/>
+            <Modal isShowing={isShowing} hide={() => showModal()} name={name} isSpecialOffer={isSpecialOffer} conseilLight={alertScale('light')} conseilWater={alertScale('water')}/>
             {
                     <li key={id} className='lmj-plant-item'>
                     <span className='titleCartItem'>{ name }</span>
@@ -57,7 +56,7 @@ function PlantItem(props) {
                         <div className='lmj-sales'>SOLDES</div>
                     }
                     <br/>
-                    <img src={require('../assets/' + cover + '.jpg')} alt={id} className='imgCart' onClick={showModal}/>
+                    <img src={require('../assets/' + cover + '.jpg')} alt={id} className='imgCart' onClick={() => showModal()}/>
                     <br/>
                     <div className='plantDetail'>
                         <span onClick={() => alertScale('light')}><CareScale careType='light' scaleValue={light}/></span>
