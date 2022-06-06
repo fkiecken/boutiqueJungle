@@ -1,10 +1,11 @@
 import PlantItem from './PlantItem'
 import { plantList } from '../datas/plantList'
+import Modal from "./Modal";
 import { useState } from 'react'
 import '../styles/ShoppingList.css'
 
 
-function Shoppinglist({ cart, updateCart}) {
+function Shoppinglist({ cart, updateCart, alertScale}) {
 
     const [categorieSelected, SetCategorieChange] = useState('Toutes catégories')
 
@@ -60,8 +61,7 @@ function Shoppinglist({ cart, updateCart}) {
             console.log('Rien a supprimer');
         }
     }
-
-
+    
     return(
         <div className='containerShoppingList'>
             <div className='categories'>
@@ -81,7 +81,7 @@ function Shoppinglist({ cart, updateCart}) {
                 categorieSelected === 'Toutes catégories' ?
                 plantList.map(({id, name, isSpecialOffer, cover, light, water, price}) => (
                     <div key={id}>
-                        <PlantItem name={name} isSpecialOffer={isSpecialOffer} cover={cover} light={light} water={water} price={price}/>
+                        <PlantItem key={id} name={name} isSpecialOffer={isSpecialOffer} cover={cover} light={light} water={water} price={price}/>
                         <div className='interactionItem'>
                         <span>Prix : { price } €</span>
                         <button onClick={() => addToCart(name, price)} className='buttonItem'>+</button>

@@ -16,38 +16,42 @@ function PlantItem(props) {
             switch(light) {
                 case 1: 
                     conseilLight = 'peu'
+                    alert('Cette plante requiert ' + conseilLight + ' de lumière')
                     return conseilLight
                 case 2: 
                     conseilLight = 'moderemment'
+                    alert('Cette plante requiert ' + conseilLight + ' de lumière')
                     return conseilLight
                 case 3: 
                     conseilLight = 'beaucoup'
+                    alert('Cette plante requiert ' + conseilLight + ' de lumière')
                     return conseilLight
                 default:
                     break
             }
-            alert('Cette plante requiert ' + conseilLight + ' de lumière')
         } else {
             switch(water) {
                 case 1: 
                     conseilWater = 'peu'
+                    alert('Cette plante requiert ' + conseilWater + " d'eau")
                     return conseilWater
                 case 2: 
                     conseilWater = 'moderemment'
+                    alert('Cette plante requiert ' + conseilWater + " d'eau")
                     return conseilWater
                 case 3: 
                     conseilWater = 'beaucoup'
+                    alert('Cette plante requiert ' + conseilWater + " d'eau")
                     return conseilWater
                 default:
                     break
             }
-            alert('Cette plante requiert ' + conseilWater + " d'eau")
         }
     }
 
     return (
         <span>
-            <Modal isShowing={isShowing} hide={() => showModal()} name={name} isSpecialOffer={isSpecialOffer} conseilLight={alertScale('light')} conseilWater={alertScale('water')}/>
+            <Modal key={id} isShowing={isShowing} hide={() => showModal()} name={name} isSpecialOffer={isSpecialOffer} conseilLight={() => alertScale('light')} conseilWater={() => alertScale('water')}/>
             {
                     <li key={id} className='lmj-plant-item'>
                     <span className='titleCartItem'>{ name }</span>

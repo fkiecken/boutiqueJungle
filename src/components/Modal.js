@@ -2,7 +2,7 @@ import '../styles/Modal.css'
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Modal = ({ isShowing, hide, name, isSpecialOffer, conseilWater, conseilLight}) =>
+const Modal = ({isShowing, hide, name, isSpecialOffer, conseilWater, conseilLight}) =>
         isShowing ?
         ReactDOM.createPortal(
             <>
